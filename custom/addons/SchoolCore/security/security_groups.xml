@@ -1,0 +1,15 @@
+<odoo>
+    <data noupdate="1">
+        <record id="SchoolCore.group_admin" model="res.groups">
+            <field name="name">EduVerse Admin</field>
+        </record>
+
+        <record id="SchoolCore.group_teacher" model="res.groups">
+            <field name="name">EduVerse Teacher</field>
+        </record>
+
+        <record id="SchoolCore.group_parent" model="res.groups">
+            <field name="name">EduVerse Parent</field>
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,12 @@
+<odoo>
+    <template id="homepage_template" name="EduVerse Homepage">
+        <t t-call="website.layout">
+            <div class="container mt-5 text-center">
+                <img src="/SchoolCore/static/src/img/logo.png" alt="EduVerse Logo" style="max-width:200px"/>
+                <h1>Welcome to EduVerse Academy</h1>
+                <p>Your all-in-one school ERP solution.</p>
+                <a href="/web/signup" class="btn btn-primary mt-4">Join Now</a>
+            </div>
+        </t>
+    </template>
+</odoo>

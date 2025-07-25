@@ -1,0 +1,28 @@
+<odoo>
+    <record id="view_pos_items_form" model="ir.ui.view">
+        <field name="name">edu.pos.item.form</field>
+        <field name="model">edu.pos.item</field>
+        <field name="arch" type="xml">
+            <form string="POS Item">
+                <group>
+                    <field name="name"/>
+                    <field name="product_id"/>
+                    <field name="price"/>
+                    <field name="category"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_pos_items_tree" model="ir.ui.view">
+        <field name="name">edu.pos.item.tree</field>
+        <field name="model">edu.pos.item</field>
+        <field name="arch" type="xml">
+            <tree string="POS Items">
+                <field name="name"/>
+                <field name="price"/>
+                <field name="category"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

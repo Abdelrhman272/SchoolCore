@@ -1,0 +1,8 @@
+<odoo>
+    <data noupdate="1">
+        <record id="eduverse_default_settings" model="ir.config_parameter">
+            <field name="key">eduverse.default_theme</field>
+            <field name="value">classic</field>
+        </record>
+    </data>
+</odoo>

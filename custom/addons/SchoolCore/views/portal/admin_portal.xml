@@ -1,0 +1,14 @@
+<odoo>
+    <template id="admin_dashboard_template" name="Admin Portal">
+        <t t-call="portal.layout">
+            <div class="container mt-4">
+                <h2>Admin Overview</h2>
+                <ul>
+                    <li>Students: <t t-esc="student_count"/></li>
+                    <li>Teachers: <t t-esc="teacher_count"/></li>
+                    <li>Fees Entries: <t t-esc="fee_count"/></li>
+                </ul>
+            </div>
+        </t>
+    </template>
+</odoo>

@@ -1,0 +1,53 @@
+eduverse_core/
+├── __manifest__.py
+├── __init__.py
+├── models/
+│   ├── student.py
+│   ├── teacher.py
+│   ├── fees.py
+│   ├── transport.py
+│   ├── pos_items.py
+│   ├── payment_gateway.py
+│   ├── theme_setup.py
+│   └── computed_mixins.py
+├── controllers/
+│   ├── main.py
+│   ├── portal_parent.py
+│   ├── portal_teacher.py
+│   ├── portal_admin.py
+│   └── api_service.py
+├── views/
+│   ├── website/
+│   │   └── homepage.xml
+│   ├── portal/
+│   │   ├── student_portal.xml
+│   │   ├── teacher_portal.xml
+│   │   └── admin_portal.xml
+│   ├── pos/
+│   │   └── pos_item_views.xml
+│   ├── transport/
+│   │   └── transport_views.xml
+│   ├── student/
+│   │   └── student_views.xml
+│   └── teacher/
+│       └── teacher_views.xml
+├── security/
+│   ├── security_groups.xml
+│   └── ir.model.access.csv
+├── data/
+│   ├── default_settings.xml
+│   ├── user_roles.xml
+│   ├── school_demo_data.xml
+│   ├── payment_provider_config.xml
+│   └── email_templates.xml
+├── static/
+│   └── src/
+│       ├── css/
+│       │   └── style.css
+│       ├── js/
+│       │   └── main.js
+│       └── img/
+│           └── logo.png
+├── hooks/
+│   └── post_init.py
+└── README.md

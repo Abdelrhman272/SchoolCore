@@ -1,0 +1,16 @@
+<odoo>
+    <data noupdate="1">
+        <record id="eduverse_invite_template" model="mail.template">
+            <field name="name">EduVerse Invite</field>
+            <field name="model_id" ref="base.model_res_partner"/>
+            <field name="subject">You're invited to EduVerse Portal</field>
+            <field name="body_html">
+                <![CDATA[
+                    <p>Hello <strong>${object.name}</strong>,</p>
+                    <p>Welcome to EduVerse Academy!</p>
+                    <p>You can access your dashboard here: <a href="https://eduverse.academy/web/login">Login</a></p>
+                ]]>
+            </field>
+        </record>
+    </data>
+</odoo>

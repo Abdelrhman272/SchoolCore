@@ -1,0 +1,15 @@
+<odoo>
+    <template id="teacher_dashboard_template" name="Teacher Portal">
+        <t t-call="portal.layout">
+            <div class="container mt-4">
+                <h2>Hello, <t t-esc="teacher.name"/></h2>
+                <p>Email: <t t-esc="teacher.email"/></p>
+                <p>Subjects:
+                    <t t-foreach="teacher.subject_ids" t-as="sub">
+                        <span><t t-esc="sub.name"/> </span>
+                    </t>
+                </p>
+            </div>
+        </t>
+    </template>
+</odoo>

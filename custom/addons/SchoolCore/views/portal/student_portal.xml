@@ -1,0 +1,16 @@
+<odoo>
+    <template id="student_portal_template" name="Student Portal">
+        <t t-call="portal.layout">
+            <div class="container mt-4">
+                <h2>Your Dashboard</h2>
+                <t t-foreach="students" t-as="student">
+                    <div class="card mb-3 p-3">
+                        <strong>Name:</strong> <t t-esc="student.name"/> |
+                        <strong>Class:</strong> <t t-esc="student.class_level"/> |
+                        <strong>Fees:</strong> <t t-esc="len(student.fees_ids)"/>
+                    </div>
+                </t>
+            </div>
+        </t>
+    </template>
+</odoo>

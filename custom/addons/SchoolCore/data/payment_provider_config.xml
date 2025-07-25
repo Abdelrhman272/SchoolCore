@@ -1,0 +1,11 @@
+<odoo>
+    <data noupdate="1">
+        <record id="payment_fawry_config" model="edu.payment.gateway">
+            <field name="name">Fawry Egypt</field>
+            <field name="provider">fawry</field>
+            <field name="api_key">FAWRY_DEMO_KEY</field>
+            <field name="secret_key">SECRET_KEY_123</field>
+            <field name="active">True</field>
+        </record>
+    </data>
+</odoo>

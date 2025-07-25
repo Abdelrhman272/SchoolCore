@@ -1,0 +1,40 @@
+<odoo>
+    <record id="view_edu_student_form" model="ir.ui.view">
+        <field name="name">edu.student.form</field>
+        <field name="model">edu.student</field>
+        <field name="arch" type="xml">
+            <form string="Student">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="student_code"/>
+                        <field name="class_level"/>
+                        <field name="gender"/>
+                        <field name="birth_date"/>
+                        <field name="age" readonly="1"/>
+                    </group>
+                    <group>
+                        <field name="email"/>
+                        <field name="phone"/>
+                        <field name="parent_id"/>
+                        <field name="transport_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_edu_student_tree" model="ir.ui.view">
+        <field name="name">edu.student.tree</field>
+        <field name="model">edu.student</field>
+        <field name="arch" type="xml">
+            <tree string="Students">
+                <field name="name"/>
+                <field name="student_code"/>
+                <field name="class_level"/>
+                <field name="gender"/>
+                <field name="age"/>
+            </tree>
+        </field>
+    </record>
+</odoo>
