@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_student_admin,Student Access,model_edu_student,schoolcore.group_admin,1,1,1,1
-access_teacher_admin,Teacher Access,model_edu_teacher,schoolcore.group_admin,1,1,1,1
-access_fees_admin,Fees Access,model_edu_fees,schoolcore.group_admin,1,1,1,1
-access_transport_admin,Transport Access,model_edu_transport_route,schoolcore.group_admin,1,1,1,1
-access_pos_item_admin,POS Items Access,model_edu_pos_item,schoolcore.group_admin,1,1,1,1
-access_gateway_admin,Payment Gateway Access,model_edu_payment_gateway,schoolcore.group_admin,1,1,1,1
+access_student_admin,Student Access,model_edu_student,SchoolCore.group_admin,1,1,1,1
+access_teacher_admin,Teacher Access,model_edu_teacher,SchoolCore.group_admin,1,1,1,1
+access_fees_admin,Fees Access,model_edu_fees,SchoolCore.group_admin,1,1,1,1
+access_transport_admin,Transport Access,model_edu_transport_route,SchoolCore.group_admin,1,1,1,1
+access_pos_item_admin,POS Items Access,model_edu_pos_item,SchoolCore.group_admin,1,1,1,1
+access_gateway_admin,Payment Gateway Access,model_edu_payment_gateway,SchoolCore.group_admin,1,1,1,1
