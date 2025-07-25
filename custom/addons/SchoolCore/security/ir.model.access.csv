@@ -1,7 +1,7 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_student,Student Access,model_eduverse_core.student,base.group_user,1,0,0,0
-access_teacher,Teacher Access,model_eduverse_core.teacher,base.group_user,1,0,0,0
-access_fees,Fees Access,model_eduverse_core.fees,base.group_user,1,0,0,0
-access_transport,Transport Access,model_eduverse_core.transport,base.group_user,1,0,0,0
-access_pos_items,POS Items Access,model_eduverse_core.pos_items,base.group_user,1,0,0,0
-access_payment_gateway,Payment Gateway Access,model_eduverse_core.payment_gateway,base.group_user,1,0,0,0
+access_student,Student Access,model_SchoolCore.student,base.group_user,1,0,0,0
+access_teacher,Teacher Access,model_SchoolCore.teacher,base.group_user,1,0,0,0
+access_fees,Fees Access,model_SchoolCore.fees,base.group_user,1,0,0,0
+access_transport,Transport Access,model_SchoolCore.transport,base.group_user,1,0,0,0
+access_pos_items,POS Items Access,model_SchoolCore.pos_items,base.group_user,1,0,0,0
+access_payment_gateway,Payment Gateway Access,model_SchoolCore.payment_gateway,base.group_user,1,0,0,0
