@@ -2,6 +2,7 @@
     <record id="view_transport_route_form" model="ir.ui.view">
         <field name="name">edu.transport.route.form</field>
         <field name="model">edu.transport.route</field>
+        <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Transport Route">
                 <group>
@@ -17,12 +18,13 @@
     <record id="view_transport_route_tree" model="ir.ui.view">
         <field name="name">edu.transport.route.tree</field>
         <field name="model">edu.transport.route</field>
+        <field name="type">form</field>
         <field name="arch" type="xml">
-            <tree string="Transport Routes">
+            <list string="Transport Routes">
                 <field name="name"/>
                 <field name="driver_name"/>
                 <field name="vehicle_number"/>
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>

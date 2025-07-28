@@ -2,6 +2,7 @@
     <record id="view_edu_teacher_form" model="ir.ui.view">
         <field name="name">edu.teacher.form</field>
         <field name="model">edu.teacher</field>
+        <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="Teacher">
                 <sheet>
@@ -20,6 +21,7 @@
     <record id="view_edu_teacher_tree" model="ir.ui.view">
         <field name="name">edu.teacher.tree</field>
         <field name="model">edu.teacher</field>
+        <field name="type">list</field>
         <field name="arch" type="xml">
             <tree string="Teachers">
                 <field name="name"/>

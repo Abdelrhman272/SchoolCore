@@ -2,6 +2,7 @@
     <record id="view_pos_items_form" model="ir.ui.view">
         <field name="name">edu.pos.item.form</field>
         <field name="model">edu.pos.item</field>
+        <field name="type">form</field>
         <field name="arch" type="xml">
             <form string="POS Item">
                 <group>
@@ -17,12 +18,13 @@
     <record id="view_pos_items_tree" model="ir.ui.view">
         <field name="name">edu.pos.item.tree</field>
         <field name="model">edu.pos.item</field>
+        <field name="type">list</field>
         <field name="arch" type="xml">
-            <tree string="POS Items">
+            <list string="POS Items">
                 <field name="name"/>
                 <field name="price"/>
                 <field name="category"/>
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>
