@@ -23,11 +23,11 @@
         <field name="model">edu.teacher</field>
         <field name="type">list</field>
         <field name="arch" type="xml">
-            <tree string="Teachers">
+            <list string="Teachers">
                 <field name="name"/>
                 <field name="email"/>
                 <field name="phone"/>
-            </tree>
+            </list>
         </field>
     </record>
 </odoo>
