@@ -7,3 +7,8 @@ access_pos_item_admin,POS Items Access,model_edu_pos_item,SchoolCore.group_admin
 access_gateway_admin,Payment Gateway Access,model_edu_payment_gateway,SchoolCore.group_admin,1,1,1,1
 access_edu_subject_user,edu.subject user,model_edu_subject,base.group_user,1,1,1,1
 access_edu_theme_setup_user,edu.theme.setup user,model_edu_theme_setup,base.group_user,1,0,0,0
+access_edu_student,edu.student,model_edu_student,SchoolCore.group_admin,1,1,1,1
+access_edu_student_teacher,edu.student,model_edu_student,SchoolCore.group_teacher,1,0,0,0
+access_edu_student_grade,edu.student.grade,model_edu_student_grade,SchoolCore.group_admin,1,1,1,1
+access_edu_student_grade_teacher,edu.student.grade,model_edu_student_grade,SchoolCore.group_teacher,1,1,1,0
+access_edu_academic_year,edu.academic.year,model_edu_academic_year,SchoolCore.group_admin,1,1,1,1

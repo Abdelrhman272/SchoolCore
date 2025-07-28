@@ -1,36 +1,62 @@
+# -*- coding: utf-8 -*-
 from odoo import models, fields, api
+
+
+class EduAcademicYear(models.Model):
+    _name = 'edu.academic.year'
+    _description = 'Academic Year'
+
+    name = fields.Char(string="Academic Year", required=True)
+    date_start = fields.Date(string="Start Date", required=True)
+    date_end = fields.Date(string="End Date", required=True)
+    active = fields.Boolean(default=True)
+
+
+class EduStudentGrade(models.Model):
+    _name = 'edu.student.grade'
+    _description = 'Student Grade'
+
+    student_id = fields.Many2one('edu.student', string="Student", ondelete="cascade")
+    subject_id = fields.Many2one('edu.subject', string="Subject")
+    exam_type = fields.Selection([
+        ('monthly', 'Monthly'),
+        ('term', 'Term'),
+        ('final', 'Final')
+    ], string="Exam Type")
+    score = fields.Float(string="Score")
+    max_score = fields.Float(string="Max Score")
+    academic_year_id = fields.Many2one('edu.academic.year', string="Academic Year")
+
 
 class EduStudent(models.Model):
     _name = 'edu.student'
-    _description = 'Student Record'
-    _inherit = ['mail.thread', 'mail.activity.mixin']
+    _description = 'Student'
 
-    name = fields.Char(required=True, tracking=True)
-    student_code = fields.Char(required=True, copy=False, index=True)
-    birth_date = fields.Date()
-    gender = fields.Selection([('male', 'Male'), ('female', 'Female')])
-    class_level = fields.Char()
-    parent_id = fields.Many2one('res.partner')
-    email = fields.Char()
-    phone = fields.Char()
-    transport_id = fields.Many2one('edu.transport.route')
-    fees_ids = fields.One2many('edu.fees', 'student_id')
-    age = fields.Integer(compute='_compute_age')
-    active = fields.Boolean(default=True)
+    name = fields.Char(string="Student Name", required=True)
+    student_code = fields.Char(string="Student Code", readonly=True, copy=False, default='New')
+    birth_date = fields.Date(string="Date of Birth")
+    gender = fields.Selection([
+        ('male', 'Male'),
+        ('female', 'Female')
+    ], string="Gender")
+    parent_id = fields.Many2one('res.partner', string="Parent")
+    stage_id = fields.Many2one('edu.stage', string="Stage")
+    class_id = fields.Many2one('edu.class', string="Class")
+    academic_year_id = fields.Many2one('edu.academic.year', string="Academic Year")
 
-    @api.depends('birth_date')
-    def _compute_age(self):
-        for rec in self:
-            rec.age = 0
-            if rec.birth_date:
-                rec.age = fields.Date.today().year - rec.birth_date.year
+    state = fields.Selection([
+        ('draft', 'Draft'),
+        ('enrolled', 'Enrolled'),
+        ('graduated', 'Graduated'),
+        ('withdrawn', 'Withdrawn'),
+        ('rejected', 'Rejected'),
+        ('archived', 'Archived')
+    ], string='Status', default='draft')
 
-    @api.onchange('parent_id')
-    def _onchange_parent(self):
-        if self.parent_id:
-            self.email = self.parent_id.email
-            self.phone = self.parent_id.phone
+    grade_ids = fields.One2many('edu.student.grade', 'student_id', string="Grades")
 
-    _sql_constraints = [
-        ('student_code_unique', 'UNIQUE(student_code)', 'Student code must be unique.')
-    ]
+    @api.model
+    def create(self, vals):
+        if vals.get('student_code', 'New') == 'New':
+            vals['student_code'] = self.env['ir.sequence'].next_by_code('edu.student') or 'New'
+        return super(EduStudent, self).create(vals)
