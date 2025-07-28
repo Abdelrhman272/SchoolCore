@@ -17,6 +17,7 @@
         'security/ir.model.access.csv',
         'data/default_settings.xml',
         'data/user_roles.xml',
+        'data/ir_sequence.xml',
         'data/school_demo_data.xml',
         'data/payment_provider_config.xml',
         'data/email_templates.xml',
