@@ -6,3 +6,4 @@ from . import pos_items
 from . import payment_gateway
 from . import theme_setup
 from . import computed_mixins
+from . import subject
