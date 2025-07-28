@@ -5,5 +5,5 @@ access_fees_admin,Fees Access,model_edu_fees,SchoolCore.group_admin,1,1,1,1
 access_transport_admin,Transport Access,model_edu_transport_route,SchoolCore.group_admin,1,1,1,1
 access_pos_item_admin,POS Items Access,model_edu_pos_item,SchoolCore.group_admin,1,1,1,1
 access_gateway_admin,Payment Gateway Access,model_edu_payment_gateway,SchoolCore.group_admin,1,1,1,1
-access_theme_setup_admin,Theme Setup Access,model_edu_theme_setup,,1,1,1,1
-
+access_edu_subject_user,edu.subject user,model_edu_subject,base.group_user,1,1,1,1
+access_edu_theme_setup_user,edu.theme.setup user,model_edu_theme_setup,base.group_user,1,0,0,0
