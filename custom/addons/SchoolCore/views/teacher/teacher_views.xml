@@ -18,6 +18,10 @@
                         <field name="active"/>
                     </group>
                 </sheet>
+                <header>
+                        <button name="action_link_users" type="object"
+                                string="Link Teacher to User" class="oe_highlight"/>
+                </header>
             </form>
         </field>
     </record>

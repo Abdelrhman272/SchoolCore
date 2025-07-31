@@ -3,9 +3,14 @@ from odoo.http import request
 
 class PortalTeacherController(http.Controller):
 
-    @http.route(['/teacher/dashboard'], type='http', auth='user', website=True)
+    @http.route(['/my/teacher'], type='http', auth='user', website=True)
     def teacher_dashboard(self, **kw):
-        teacher = request.env['edu.teacher'].search([('email', '=', request.env.user.email)], limit=1)
+        user = request.env.user
+        teacher = request.env['edu.teacher'].sudo().search([('user_id', '=', user.id)], limit=1)
+
+        if not teacher:
+            return request.render('website.404')
+
         return request.render('SchoolCore.teacher_dashboard_template', {
             'teacher': teacher
         })

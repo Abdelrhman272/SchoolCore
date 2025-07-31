@@ -4,9 +4,15 @@
             <div class="container mt-4">
                 <h2>Hello, <t t-esc="teacher.name"/></h2>
                 <p>Email: <t t-esc="teacher.email"/></p>
+                <p>Phone: <t t-esc="teacher.phone"/></p>
                 <p>Subjects:
                     <t t-foreach="teacher.subject_ids" t-as="sub">
-                        <span><t t-esc="sub.name"/> </span>
+                        <span class="badge bg-primary me-1"><t t-esc="sub.name"/></span>
+                    </t>
+                </p>
+                <p>Classes:
+                    <t t-foreach="teacher.class_ids" t-as="cls">
+                        <span class="badge bg-success me-1"><t t-esc="cls.name"/></span>
                     </t>
                 </p>
             </div>
