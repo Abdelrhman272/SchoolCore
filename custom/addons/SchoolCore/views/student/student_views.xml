@@ -70,6 +70,7 @@
               name="SchoolCore"
               sequence="1"
               action="SchoolCore.action_edu_student"
+              groups="base.group_user"
               web_icon="SchoolCore,static/description/icon.png"/>
 
     <!-- Submenus under the app -->
