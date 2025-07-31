@@ -60,7 +60,7 @@
     </record>
 
     <!-- Menu Item -->
-    <menuitem id="menu_schoolcore_root" name="School Management" sequence="10"/>
+    <menuitem id="menu_schoolcore_root" name="School Management" sequence="10" action="action_edu_student"/>
     <menuitem id="menu_student_main" name="Students" parent="menu_schoolcore_root" sequence="10"/>
     <menuitem id="menu_student" name="Students" parent="menu_student_main" action="action_edu_student"/>
 </odoo>
