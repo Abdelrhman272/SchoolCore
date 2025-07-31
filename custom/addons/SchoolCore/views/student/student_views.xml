@@ -21,13 +21,13 @@
                     <notebook>
                         <page string="Grades">
                             <field name="grade_ids">
-                                <list editable="bottom">
+                                <tree editable="bottom">
                                     <field name="subject_id"/>
                                     <field name="exam_type"/>
                                     <field name="score"/>
                                     <field name="max_score"/>
                                     <field name="academic_year_id"/>
-                                </list>
+                                </tree>
                             </field>
                         </page>
                     </notebook>
@@ -42,25 +42,31 @@
         <field name="model">edu.student</field>
         <field name="type">list</field>
         <field name="arch" type="xml">
-            <list string="Students">
+            <tree string="Students">
                 <field name="name"/>
                 <field name="student_code"/>
                 <field name="gender"/>
                 <field name="academic_year_id"/>
                 <field name="state"/>
-            </list>
+            </tree>
         </field>
     </record>
 
-    <!-- Action -->
+    <!-- Actions -->
+    <record id="SchoolCore.action_edu_student" model="ir.actions.act_window">
+        <field name="name">Students</field>
+        <field name="res_model">edu.student</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
     <record id="action_schoolcore_main" model="ir.actions.act_window">
         <field name="name">SchoolCore</field>
         <field name="res_model">edu.stage</field>
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Menu Item -->
+    <!-- Menu Items -->
     <menuitem id="menu_schoolcore_root" name="School Management" sequence="10" action="action_schoolcore_main"/>
     <menuitem id="menu_student_main" name="Students" parent="menu_schoolcore_root" sequence="10"/>
-    <menuitem id="menu_student" name="Students" parent="menu_student_main" action="action_edu_student"/>
+    <menuitem id="menu_student" name="Students" parent="menu_student_main" action="SchoolCore.action_edu_student"/>
 </odoo>
