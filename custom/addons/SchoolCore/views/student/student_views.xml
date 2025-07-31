@@ -65,8 +65,15 @@
         <field name="view_mode">tree,form</field>
     </record>
 
-    <!-- Menu Items -->
-    <menuitem id="menu_schoolcore_root" name="School Management" sequence="10" action="action_schoolcore_main"/>
+    <!-- App-Level Menu (Application) -->
+    <menuitem id="menu_schoolcore_app"
+              name="SchoolCore"
+              sequence="1"
+              action="SchoolCore.action_edu_student"
+              web_icon="SchoolCore,static/description/icon.png"/>
+
+    <!-- Submenus under the app -->
+    <menuitem id="menu_schoolcore_root" name="School Management" parent="menu_schoolcore_app" sequence="10" action="action_schoolcore_main"/>
     <menuitem id="menu_student_main" name="Students" parent="menu_schoolcore_root" sequence="10"/>
     <menuitem id="menu_student" name="Students" parent="menu_student_main" action="SchoolCore.action_edu_student"/>
 </odoo>
