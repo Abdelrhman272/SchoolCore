@@ -1,0 +1,98 @@
+<odoo>
+    <!-- Stage Views -->
+    <record id="view_edu_stage_form" model="ir.ui.view">
+        <field name="name">edu.stage.form</field>
+        <field name="model">edu.stage</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="Stage">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="active"/>
+                    </group>
+                    <notebook>
+                        <page string="Classes">
+                            <field name="class_ids">
+                                <list editable="bottom">
+                                    <field name="name"/>
+                                    <field name="code"/>
+                                    <field name="capacity"/>
+                                    <field name="academic_year_id"/>
+                                    <field name="active"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_edu_stage_tree" model="ir.ui.view">
+        <field name="name">edu.stage.tree</field>
+        <field name="model">edu.stage</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Stages">
+                <field name="name"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Class Views -->
+    <record id="view_edu_class_form" model="ir.ui.view">
+        <field name="name">edu.class.form</field>
+        <field name="model">edu.class</field>
+        <field name="type">form</field> 
+        <field name="arch" type="xml">
+            <form string="Class">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="stage_id"/>
+                        <field name="academic_year_id"/>
+                        <field name="capacity"/>
+                        <field name="active"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_edu_class_tree" model="ir.ui.view">
+        <field name="name">edu.class.tree</field>
+        <field name="model">edu.class</field>
+        <field name="type">list</field>
+        <field name="arch" type="xml">
+            <list string="Classes">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="stage_id"/>
+                <field name="academic_year_id"/>
+                <field name="capacity"/>
+                <field name="active"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Actions & Menus -->
+    <record id="action_edu_stage" model="ir.actions.act_window">
+        <field name="name">Stages</field>
+        <field name="res_model">edu.stage</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_edu_class" model="ir.actions.act_window">
+        <field name="name">Classes</field>
+        <field name="res_model">edu.class</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_stage_class_root" name="Academic Structure" parent="menu_schoolcore_root" sequence="20"/>
+    <menuitem id="menu_edu_stage" name="Stages" parent="menu_stage_class_root" action="action_edu_stage"/>
+    <menuitem id="menu_edu_class" name="Classes" parent="menu_stage_class_root" action="action_edu_class"/>
+</odoo>

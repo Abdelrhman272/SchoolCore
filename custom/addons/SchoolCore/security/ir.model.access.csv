@@ -12,3 +12,6 @@ access_edu_student_teacher,edu.student,model_edu_student,SchoolCore.group_teache
 access_edu_student_grade,edu.student.grade,model_edu_student_grade,SchoolCore.group_admin,1,1,1,1
 access_edu_student_grade_teacher,edu.student.grade,model_edu_student_grade,SchoolCore.group_teacher,1,1,1,0
 access_edu_academic_year,edu.academic.year,model_edu_academic_year,SchoolCore.group_admin,1,1,1,1
+access_edu_stage,edu.stage,model_edu_stage,SchoolCore.group_admin,1,1,1,1
+access_edu_class,edu.class,model_edu_class,SchoolCore.group_admin,1,1,1,1
+

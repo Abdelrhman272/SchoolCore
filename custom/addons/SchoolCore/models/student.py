@@ -55,12 +55,6 @@ class EduStudent(models.Model):
 
     grade_ids = fields.One2many('edu.student.grade', 'student_id', string="Grades")
 
-    @api.model
-    def create(self, vals):
-        if vals.get('student_code', 'New') == 'New':
-            vals['student_code'] = self.env['ir.sequence'].next_by_code('edu.student') or 'New'
-        return super(EduStudent, self).create(vals)
-    
     @api.model_create_multi
     def create(self, vals_list):
         for vals in vals_list:

@@ -29,6 +29,7 @@
         'views/student/student_views.xml',
         'views/teacher/teacher_views.xml',
         'views/pos/pos_item_views.xml',
+        'views/stage_class_views.xml',
     ],
     'assets': {
         'web.assets_frontend': [
