@@ -1,4 +1,5 @@
 <odoo>
+    <!-- Form View -->
     <record id="view_edu_teacher_form" model="ir.ui.view">
         <field name="name">edu.teacher.form</field>
         <field name="model">edu.teacher</field>
@@ -11,23 +12,41 @@
                         <field name="email"/>
                         <field name="phone"/>
                         <field name="employee_ref"/>
+                        <field name="user_id"/>
                         <field name="subject_ids" widget="many2many_tags"/>
+                        <field name="class_ids" widget="many2many_tags"/>
+                        <field name="active"/>
                     </group>
                 </sheet>
             </form>
         </field>
     </record>
 
+    <!-- Tree View -->
     <record id="view_edu_teacher_tree" model="ir.ui.view">
         <field name="name">edu.teacher.tree</field>
         <field name="model">edu.teacher</field>
         <field name="type">list</field>
         <field name="arch" type="xml">
-            <list string="Teachers">
+            <list>
                 <field name="name"/>
                 <field name="email"/>
                 <field name="phone"/>
+                <field name="active"/>
             </list>
         </field>
     </record>
+
+    <!-- Action -->
+    <record id="action_edu_teacher" model="ir.actions.act_window">
+        <field name="name">Teachers</field>
+        <field name="res_model">edu.teacher</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu -->
+    <menuitem id="menu_teacher_main" name="Teachers"
+              parent="menu_schoolcore_root"
+              sequence="20"
+              action="action_edu_teacher"/>
 </odoo>
