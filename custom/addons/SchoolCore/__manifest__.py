@@ -21,7 +21,6 @@
         'data/school_demo_data.xml',
         'data/payment_provider_config.xml',
         'data/email_templates.xml',
-        'data/student_sequence_data.xml',
         'views/website/homepage.xml',
         'views/portal/student_portal.xml',
         'views/portal/teacher_portal.xml',
